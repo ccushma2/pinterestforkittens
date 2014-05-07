@@ -7,4 +7,7 @@ class PageController < ApplicationController
 
   def cats
   end
+
+  def pins
+  end
 end
