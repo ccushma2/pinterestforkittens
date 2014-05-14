@@ -8,6 +8,6 @@
     <a class="btn btn-danger btn-lg" role="button" href="https://www.google.com/search?q=puppies&tbm=isch"><span class="glyphicon glyphicon-heart"></span> I prefer puppies</a>
   </p>
   <% if user_signed_in? %>
-  	
+  	 <%= current_user.email %>
   <% end %>
 </div>
