@@ -6,7 +6,6 @@
     <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary btn-lg" %></p>
 <% end %>
 
-<% if user_signed_in? %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -22,6 +21,7 @@
       <tr>
         <td><%= pin.description %></td>
         <td><%= time_ago_in_words pin.created_at %></td>
+        <td><%= pin.user.try( :email ) %></td>
         <td><%= link_to 'Show', pin %></td>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,5 +33,4 @@
 <br>
 
 <%= link_to 'New Pin', new_pin_path %>
-<% end %>
 </div>
